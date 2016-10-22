@@ -1,25 +1,25 @@
 CREATE TABLE Organization
 (
-  OrgId INT NOT NULL,
-  Name INT NOT NULL,
-  Street INT NOT NULL,
-  City INT NOT NULL,
-  State INT NOT NULL,
-  Zip INT NOT NULL,
+  OrgId INT NOT NULL AUTO INCREMENT,
+  Name VARCHAR(50) NOT NULL,
+  Street VARCHAR(50) NOT NULL,
+  City VARCHAR(20) NOT NULL,
+  State VARCHAR(20) NOT NULL,
+  Zip VARCHAR(6) NOT NULL,
   PRIMARY KEY (OrgId)
 );
 
 CREATE TABLE Proposal
 (
-  Image INT,
+  Image BLOB,
   Serves INT NOT NULL,
-  Street INT NOT NULL,
-  City INT NOT NULL,
-  State INT NOT NULL,
-  Zip INT NOT NULL,
-  Status INT NOT NULL,
-  ProposalID INT NOT NULL,
-  ProposalTime INT NOT NULL,
+  Street VARCHAR(50) NOT NULL,
+  City VARCHAR(20) NOT NULL,
+  State VARCHAR(20) NOT NULL,
+  Zip VARCHAR(6) NOT NULL,
+  Status VARCHAR(10) NOT NULL,
+  ProposalID INT NOT NULL AUTO INCREMENT,
+  ProposalTime DATETIME NOT NULL,
   OrgId INT NOT NULL,
   PRIMARY KEY (ProposalID),
   FOREIGN KEY (OrgId) REFERENCES Organization(OrgId)
@@ -36,7 +36,7 @@ CREATE TABLE Subscribes
 
 CREATE TABLE Organization_Email
 (
-  Email INT NOT NULL,
+  Email VARCHAR(50) NOT NULL,
   OrgId INT NOT NULL,
   PRIMARY KEY (Email, OrgId),
   FOREIGN KEY (OrgId) REFERENCES Organization(OrgId)
@@ -44,7 +44,7 @@ CREATE TABLE Organization_Email
 
 CREATE TABLE Organization_CellPhone
 (
-  CellPhone INT NOT NULL,
+  CellPhone VARCHAR(15) NOT NULL,
   OrgId INT NOT NULL,
   PRIMARY KEY (CellPhone, OrgId),
   FOREIGN KEY (OrgId) REFERENCES Organization(OrgId)
@@ -52,8 +52,8 @@ CREATE TABLE Organization_CellPhone
 
 CREATE TABLE Approval
 (
-  ApprovalID INT NOT NULL,
-  ApprovalTime INT NOT NULL,
+  ApprovalID INT NOT NULL AUTO INCREMENT,
+  ApprovalTime DATETIME NOT NULL,
   Serves INT NOT NULL,
   ProposalID INT NOT NULL,
   OrgId INT NOT NULL,
