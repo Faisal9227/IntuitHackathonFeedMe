@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link href="./stylesheet.css" rel="stylesheet">
+<link href="./stylesheet2.css" rel="stylesheet">
+    <style type="text/css">
+    .form-label-left{
+        width:150px !important;
+    }
+    .form-line{
+        padding-top:12px;
+        padding-bottom:12px;
+    }
+    .form-label-right{
+        width:150px !important;
+    }
+    body, html{
+        margin:0;
+        padding:0;
+        background:rgb(219, 232, 235);
+    }
+
+    .form-all{
+        margin:0px auto;
+        padding-top:0px;
+        width:800px;
+        color:rgb(0, 0, 0) !important;
+        font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
+        font-size:14px;
+    }
+    .form-radio-item label, .form-checkbox-item label, .form-grading-label, .form-header{
+        color: #555;
+    }
+
+</style>
+</head>
+
+<body>
+    <div class="form-all">
+    <ul class="form-section page-section">
+      <li id="cid_28" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group">
+          <div class="header-text httal htvam">
+            <h1 id="header_28" class="form-header">
+              Organization Register
+            </h1>
+            <div id="subHeader_28" class="form-subHeader">
+              To apply for membership please complete all questions.
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_textbox" id="id_30" style="z-index: 0;">
+        <label class="form-label form-label-left form-label-auto" id="label_30" for="input_30">
+          Organization Name
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_30" class="form-input jf-required">
+          <input type="text" class=" form-textbox validate[required]" data-type="input-textbox" id="orgName" name="orgName" size="50" value="" placeholder="Org. Name">
+        </div>
+      <div class="form-description" style="display: none;"><div class="form-description-arrow"></div><div class="form-description-arrow-small"></div><div class="form-description-content">Enter The name of organization</div></div></li>
+      <li class="form-line jf-required" data-type="control_address" id="id_5">
+        <label class="form-label form-label-left form-label-auto" id="label_5" for="input_5">
+          Address
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_5" class="form-input jf-required">
+          <table summary="" undefined="" class="form-address-table" border="0" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+              <td colspan="2">
+                <span class="form-sub-label-container" style="vertical-align: top">
+                  <input class="form-textbox validate[required] form-address-line" type="text" name="streetAddress" id="streetAddress">
+                  <label class="form-sub-label" for="input_5_addr_line1" id="sublabel_5_addr_line1" style="min-height: 13px;"> Street Address </label>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td width="50%">
+                <span class="form-sub-label-container" style="vertical-align: top">
+                  <input class="form-textbox validate[required] form-address-city" type="text" name="cityName" id="cityName" size="21">
+                  <label class="form-sub-label" for="input_5_city" id="sublabel_5_city" style="min-height: 13px;"> City </label>
+                </span>
+              </td>
+              <td>
+                <span class="form-sub-label-container" style="vertical-align: top">
+                  <select class="form-dropdown validate[required] form-address-state" name="stateName" id="stateName">
+                    <option value="" selected=""> Please Select </option>
+                    <option value="Alabama"> Alabama </option>
+                    <option value="Alaska"> Alaska </option>
+                    <option value="Arizona"> Arizona </option>
+                    <option value="Arkansas"> Arkansas </option>
+                    <option value="California"> California </option>
+                    <option value="Colorado"> Colorado </option>
+                    <option value="Connecticut"> Connecticut </option>
+                    <option value="Delaware"> Delaware </option>
+                    <option value="District of Columbia"> District of Columbia </option>
+                    <option value="Florida"> Florida </option>
+                    <option value="Georgia"> Georgia </option>
+                    <option value="Hawaii"> Hawaii </option>
+                    <option value="Idaho"> Idaho </option>
+                    <option value="Illinois"> Illinois </option>
+                    <option value="Indiana"> Indiana </option>
+                    <option value="Iowa"> Iowa </option>
+                    <option value="Kansas"> Kansas </option>
+                    <option value="Kentucky"> Kentucky </option>
+                    <option value="Louisiana"> Louisiana </option>
+                    <option value="Maine"> Maine </option>
+                    <option value="Maryland"> Maryland </option>
+                    <option value="Massachusetts"> Massachusetts </option>
+                    <option value="Michigan"> Michigan </option>
+                    <option value="Minnesota"> Minnesota </option>
+                    <option value="Mississippi"> Mississippi </option>
+                    <option value="Missouri"> Missouri </option>
+                    <option value="Montana"> Montana </option>
+                    <option value="Nebraska"> Nebraska </option>
+                    <option value="Nevada"> Nevada </option>
+                    <option value="New Hampshire"> New Hampshire </option>
+                    <option value="New Jersey"> New Jersey </option>
+                    <option value="New Mexico"> New Mexico </option>
+                    <option value="New York"> New York </option>
+                    <option value="North Carolina"> North Carolina </option>
+                    <option value="North Dakota"> North Dakota </option>
+                    <option value="Ohio"> Ohio </option>
+                    <option value="Oklahoma"> Oklahoma </option>
+                    <option value="Oregon"> Oregon </option>
+                    <option value="Pennsylvania"> Pennsylvania </option>
+                    <option value="Rhode Island"> Rhode Island </option>
+                    <option value="South Carolina"> South Carolina </option>
+                    <option value="South Dakota"> South Dakota </option>
+                    <option value="Tennessee"> Tennessee </option>
+                    <option value="Texas"> Texas </option>
+                    <option value="Utah"> Utah </option>
+                    <option value="Vermont"> Vermont </option>
+                    <option value="Virginia"> Virginia </option>
+                    <option value="Washington"> Washington </option>
+                    <option value="West Virginia"> West Virginia </option>
+                    <option value="Wisconsin"> Wisconsin </option>
+                    <option value="Wyoming"> Wyoming </option>
+                  </select>
+                  <label class="form-sub-label" for="input_5_state" id="sublabel_5_state" style="min-height: 13px;"> State </label>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td width="50%">
+                <span class="form-sub-label-container" style="vertical-align: top">
+                  <input class="form-textbox validate[required] form-address-postal" type="text" name="zipCode" id="zipCode" size="10">
+                  <label class="form-sub-label" for="input_5_postal" id="sublabel_5_postal" style="min-height: 13px;"> Zip Code </label>
+                </span>
+              </td>
+             
+            </tr>
+          </tbody></table>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_email" id="id_10">
+        <label class="form-label form-label-left form-label-auto" id="label_10" for="input_10">
+          E-mail
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_10" class="form-input jf-required">
+          <input type="email" class=" form-textbox validate[required, Email]" id="email" name="email" size="32" value="" placeholder="ex: myname@example.com">
+        </div>
+      </li>
+
+      <li class="form-line jf-required" data-type="control_email" id="id_10">
+        <label class="form-label form-label-left form-label-auto" id="label_10" for="input_10">
+         Password
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_10" class="form-input jf-required">
+          <input type="password" class=" form-textbox validate[required, Email]" id="password" name="password" size="32" value="" placeholder="Password">
+        </div>
+      </li>
+      
+      <li class="form-line jf-required" data-type="control_phone" id="id_6">
+        <label class="form-label form-label-left form-label-auto" id="label_6" for="input_6">
+          Cell Number
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_6" class="form-input jf-required">
+          
+          <span class="form-sub-label-container" style="vertical-align: top">
+            <input class="form-textbox validate[required]" type="tel" name="cellPhone" id="input_cellPhone" size="8">
+            <label class="form-sub-label" for="input_6_phone" id="sublabel_phone" style="min-height: 13px;"> Phone Number </label>
+          </span>
+        </div>
+      </li>
+      
+      <li class="form-line" data-type="control_button" id="id_27">
+        <div id="cid_27" class="form-input-wide">
+          <div style="margin-left:156px" class="form-buttons-wrapper">
+            <button id="input_27" type="submit" class="form-submit-button">
+              Register
+            </button>
+         </div>
+        </div>
+      </li>
+ 
+    </ul>
+  </div>
+</body>
+</html>
