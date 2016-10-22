@@ -1,0 +1,60 @@
+CREATE TABLE Organization
+(
+  OrgId INTEGER PRIMARY KEY AUTOINCREMENT,
+  Name VARCHAR(50) NOT NULL,
+  Street VARCHAR(50) NOT NULL,
+  City VARCHAR(20) NOT NULL,
+  State VARCHAR(20) NOT NULL,
+  Zip VARCHAR(6) NOT NULL,
+ );
+
+CREATE TABLE Proposal
+(
+  Image BLOB,
+  Serves INT NOT NULL,
+  Street VARCHAR(50) NOT NULL,
+  City VARCHAR(20) NOT NULL,
+  State VARCHAR(20) NOT NULL,
+  Zip VARCHAR(6) NOT NULL,
+  Status VARCHAR(10) NOT NULL,
+  ProposalID INTEGER PRIMARY KEY AUTOINCREMENT,
+  ProposalTime DATETIME NOT NULL,
+  OrgId INT NOT NULL,
+  FOREIGN KEY (OrgId) REFERENCES Organization(OrgId)
+);
+
+CREATE TABLE Subscribes
+(
+  OrgID INT NOT NULL,
+  SubscriberID INT NOT NULL,
+  PRIMARY KEY (OrgID, SubscriberID),
+  FOREIGN KEY (OrgID) REFERENCES Organization(OrgId),
+  FOREIGN KEY (SubscriberID) REFERENCES Organization(OrgId)
+);
+
+CREATE TABLE Organization_Email
+(
+  Email VARCHAR(50) NOT NULL,
+  OrgId INT NOT NULL,
+  PRIMARY KEY (Email, OrgId),
+  FOREIGN KEY (OrgId) REFERENCES Organization(OrgId)
+);
+
+CREATE TABLE Organization_CellPhone
+(
+  CellPhone VARCHAR(15) NOT NULL,
+  OrgId INT NOT NULL,
+  PRIMARY KEY (CellPhone, OrgId),
+  FOREIGN KEY (OrgId) REFERENCES Organization(OrgId)
+);
+
+CREATE TABLE Approval
+(
+  ApprovalID INTEGER PRIMARY KEY AUTOINCREMENT,
+  ApprovalTime DATETIME NOT NULL,
+  Serves INT NOT NULL,
+  ProposalID INT NOT NULL,
+  OrgId INT NOT NULL,
+  FOREIGN KEY (ProposalID) REFERENCES Proposal(ProposalID),
+  FOREIGN KEY (OrgId) REFERENCES Organization(OrgId)
+);
