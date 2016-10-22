@@ -1,0 +1,63 @@
+CREATE TABLE Organization
+(
+  OrgId INT NOT NULL,
+  Name INT NOT NULL,
+  Street INT NOT NULL,
+  City INT NOT NULL,
+  State INT NOT NULL,
+  Zip INT NOT NULL,
+  PRIMARY KEY (OrgId)
+);
+
+CREATE TABLE Proposal
+(
+  Image INT,
+  Serves INT NOT NULL,
+  Street INT NOT NULL,
+  City INT NOT NULL,
+  State INT NOT NULL,
+  Zip INT NOT NULL,
+  Status INT NOT NULL,
+  ProposalID INT NOT NULL,
+  ProposalTime INT NOT NULL,
+  OrgId INT NOT NULL,
+  PRIMARY KEY (ProposalID),
+  FOREIGN KEY (OrgId) REFERENCES Organization(OrgId)
+);
+
+CREATE TABLE Subscribes
+(
+  OrgID INT NOT NULL,
+  SubscriberID INT NOT NULL,
+  PRIMARY KEY (OrgID, SubscriberID),
+  FOREIGN KEY (OrgID) REFERENCES Organization(OrgId),
+  FOREIGN KEY (SubscriberID) REFERENCES Organization(OrgId)
+);
+
+CREATE TABLE Organization_Email
+(
+  Email INT NOT NULL,
+  OrgId INT NOT NULL,
+  PRIMARY KEY (Email, OrgId),
+  FOREIGN KEY (OrgId) REFERENCES Organization(OrgId)
+);
+
+CREATE TABLE Organization_CellPhone
+(
+  CellPhone INT NOT NULL,
+  OrgId INT NOT NULL,
+  PRIMARY KEY (CellPhone, OrgId),
+  FOREIGN KEY (OrgId) REFERENCES Organization(OrgId)
+);
+
+CREATE TABLE Approval
+(
+  ApprovalID INT NOT NULL,
+  ApprovalTime INT NOT NULL,
+  Serves INT NOT NULL,
+  ProposalID INT NOT NULL,
+  OrgId INT NOT NULL,
+  PRIMARY KEY (ApprovalID),
+  FOREIGN KEY (ProposalID) REFERENCES Proposal(ProposalID),
+  FOREIGN KEY (OrgId) REFERENCES Organization(OrgId)
+);
